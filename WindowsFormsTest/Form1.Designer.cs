@@ -35,6 +35,7 @@
             this.smallButton = new System.Windows.Forms.Button();
             this.label = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,12 +62,13 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(28, 161);
+            this.checkBox2.Location = new System.Drawing.Point(28, 160);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(80, 17);
             this.checkBox2.TabIndex = 2;
             this.checkBox2.Text = "checkBox2";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // textBox1
             // 
@@ -108,11 +110,22 @@
             this.trackBar1.TabIndex = 6;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.progressBar1.Location = new System.Drawing.Point(331, 270);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(212, 23);
+            this.progressBar1.Step = 100;
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.progressBar1.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 443);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.label);
             this.Controls.Add(this.smallButton);
@@ -122,6 +135,7 @@
             this.Controls.Add(this.bigButton);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
@@ -138,6 +152,7 @@
 		private System.Windows.Forms.Button smallButton;
 		private System.Windows.Forms.Label label;
         private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
